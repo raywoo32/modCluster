@@ -1,0 +1,22 @@
+Package: modCluster
+Type: Package
+Title: modCluster
+Version: 1.0.0
+Date: 2019-09-01
+Authors@R: c(
+    person("Rachel", "Woo", email = "rachelsam.woo@mail.utoronto.ca", role = c("aut", "cre")))
+Maintainer: Rachel Woo <rachelsam.woo@mail.utoronto.ca>
+Description: Clusters vertexes in an igraph object by the density of edges 
+              in modules associated with these verticies. This package can 
+              be used for visualizing the interconnectedness within and 
+              between modules.
+License: file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports:
+    igraph,
+Suggests:
+    testthat,    
+    grDevices,
+    graphics
+RoxygenNote: 6.1.1
