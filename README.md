@@ -30,7 +30,6 @@ package include:
 
 ``` r
 library("modCluster")
-lsf.str("package:modCluster")
 ```
 
 - modCluster
