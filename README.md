@@ -17,6 +17,9 @@ library("modCluster")
 
 ## Overview
 
+An overview of the package is illustrated below. 
+![](./inst/extdata/ModCluster.jpg)
+
 This package visualizes an igraph object by clustering vertex associated modules. The modules are clustered by edge density, that is, if the edge density would improve by combining modules the modules will be combined. The modules can be visualized with gene names or without. This package can be used to see the link between gene interactions and a mutually exclusive biological category such as co-expression or gene location. 
 
 The clustering algorithm is based on density, a metric of relative edge connectivity. When the edge connectivity within a module is less than the module combined with another module (assuming it is true both ways and there is no better match) modCluster authomatically clusters the modules together and visualizes them together. 
