@@ -1,12 +1,11 @@
 # getAllPossibleGroups.R
 
-source("./R/getModuleNames.R")
-
 #' Makes df containing all possible combined modules of length 2 with density calculated
 #'
 #' @param graph a valid graph object
 #' @param vert valid verticies as described by igraph::graph_from_data_frame
 #' @param moduleGraphs df with $MODULE module name, $SUBGRAPH graph for verts in module, $DENSITY density of subgraph
+#' @import igraph
 #' @return df like moduleGraphs, where each module is every possible module combination of size 2
 getAllPossibleGroups <- function(graph, vert, moduleGraphs) {
   numModules <- length(unique(moduleGraphs$MODULE))

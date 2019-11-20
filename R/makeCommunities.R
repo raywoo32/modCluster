@@ -4,6 +4,7 @@
 #'
 #' @param graph a valid igraph object
 #' @param chosen df with chosen combined modules (columns $MODULE, $SUBGRAPH, $DENSITY)
+#' @import igraph
 #' @return list containing communities, communities list, and igraph membership
 makeCommunities <- function(graph, chosen) {
   # Change from default membership

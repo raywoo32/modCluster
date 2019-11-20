@@ -5,6 +5,7 @@
 #' @param bestGroups strings of best combined module groups
 #' @param moduleGraphs df with $MODULE, $SUBGRAPH, $DENSITY for provided modules
 #' @param grouped df with $MODULE, $SUBGRAPH, $DENSITY for all grouped modules
+#' @import igraph
 #' @return df with $MODULE, $SUBGRAPH, $DENSITY for the modules in bestGroups
 getChosenMods <- function(bestGroups, moduleGraphs, grouped) {
   selectFrom <- rbind(grouped, moduleGraphs)
@@ -21,6 +22,7 @@ getChosenMods <- function(bestGroups, moduleGraphs, grouped) {
 #' Use igraph::mergecoords to make a layout with the chosen modules
 #'
 #' @param selected df with module name, subgraph and density for the groups with the best density
+#' @import igraph
 #' @return layout, df with xy coordinates
 makeLayout <- function(selected) {
   subgraphs <- selected$SUBGRAPH

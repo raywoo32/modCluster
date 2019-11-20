@@ -6,6 +6,7 @@
 #' @param ungrouped df with $MODULE ungrouped module name $SUBGRAPH igraph object $DENSITY density of subgraph
 #' @param grouped  df with $MODULE grouped module name $SUBGRAPH igraph object $DENSITY density of subgraph
 #' @return sorted df
+#' @import igraph
 makeSortedCompare <- function(ungrouped, grouped) {
   # Make combined sorted list
   # Adapted From: https://stackoverflow.com/questions/18142117/how-to-replace-nan-value-with-zero-in-a-huge-data-frame/18143097

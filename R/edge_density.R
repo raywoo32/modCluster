@@ -2,6 +2,7 @@
 #' Modified igraph::edge_density to include weights
 #'
 #' @param graph a valid igraph object
+#' @import igraph
 #' @return float representing density of the graph
 edge_density <- function(graph) {
   edges <- igraph::as_data_frame(graph)

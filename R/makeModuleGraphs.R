@@ -4,6 +4,7 @@
 #'
 #' @param edges valid edges as described by igraph::graph_from_data_frame
 #' @param vert valid verticies as described by igraph::graph_from_data_frame
+#' @import igraph
 #' @return df with columns (MODULES, SUBGRAPHS, DENSITY) from modules in verts
 makeModuleGraphs <- function(edges, vert) {
   graph <- igraph::graph_from_data_frame(edges, directed = FALSE, vertices = vert)

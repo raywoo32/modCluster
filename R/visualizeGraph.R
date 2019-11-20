@@ -7,7 +7,8 @@
 #' @param layout xy layout object
 #' @param membership list of gene names and module name
 #' @param communitiesList list of modules
-#' @return NULL
+#' @import igraph graphics grDevices
+#' @return 0
 visualizeGraph <- function(graph, chosen, layout, membership, communitiesList) {
   # Adapted from: https://stackoverflow.com/questions/24595716/assign-colors-to-communities-in-igraph
   # Adapted from: http://www.sthda.com/english/wiki/add-legends-to-plots-in-r-software-the-easiest-way
@@ -17,6 +18,7 @@ visualizeGraph <- function(graph, chosen, layout, membership, communitiesList) {
   graphics::par(mar=c(1,1,1,1))
   igraph::plot.igraph(graph, layout=layout,  vertex.size=0.3, vertex.label = igraph::V(graph)$name, edge.color="grey",  vertex.label.dist=1.5)
   graphics::legend("topleft", legend=communitiesList, fill=colG, title="Modules", box.col="white")
+  return(0)
 }
 
 
