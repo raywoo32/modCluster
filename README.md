@@ -39,6 +39,8 @@ library("modCluster")
 
 The function modCluster is the only exported and controller function. modCluster takes 2 data frames that describe the edges and verticies as well as a flag to display or hide gene names. 
 
+Red edges symbolize edges from one module to another. Black edges symbolize edges within a module. 
+
 modCluster(edge, genes, displayGene)
 
 
