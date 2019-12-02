@@ -23,8 +23,8 @@ shinyServer(function(input, output) {
   })
   # make plot output
   output$plot <- renderPlot({
-    geneFlag <- input$geneFlag
+    communityFlag <- input$communityFlag
 
-    modCluster(edges, vert, geneFlag)
+    clusterByModule(edges, vert, displayCommunity=communityFlag)
   })
 })

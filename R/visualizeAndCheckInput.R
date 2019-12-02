@@ -4,7 +4,8 @@
 #'
 #' @param edges valid edges as described by igraph::graph_from_data_frame
 #' @param vert valid verticies as described by igraph::graph_from_data_frame
-#' @param displayGene a flag to choose to display or hide genes
+#' @param displayCommunity a boolean flag to choose to display community markers
+#' (community markers is TRUE, no community markers is FALSE)
 #' @return NULL
 #' @export
 #'
@@ -13,10 +14,10 @@
 #'\dontrun{
 #' load("./inst/exampleEdge.Rda")
 #' load("./inst/exampleVert.Rda")
-#' modCluster(edges, vert) // display gene is auto false
-#' modCluster(edges, vert, displayGene=TRUE)
+#' clusterByModule(edges, vert, displayCommunity=FALSE)
+#' clusterByModule(edges, vert, displayCommunity=TRUE)
 #'}
-modCluster <- function(edges, vert, displayGene=FALSE) {
+clusterByModule <- function(edges, vert, displayCommunity=TRUE) {
   graph <- checkValidInput(edges, vert)
   moduleGraphs <- makeModuleGraphs(edges, vert)
   grouped <- getAllPossibleGroups(graph, vert, moduleGraphs)
@@ -28,13 +29,13 @@ modCluster <- function(edges, vert, displayGene=FALSE) {
   communities <- communitiesOutput$communities
   communitiesList <- communitiesOutput$legend
   membership <- communitiesOutput$membership
-  if (displayGene == FALSE) {
+  if (displayCommunity == TRUE) {
     visualizeCommunities(graph, chosen, layout, membership, communities, communitiesList)
-    return("no_display_gene")
+    return("displayCommunity")
   }
   else {
     visualizeGraph(graph, chosen, layout, membership, communitiesList)
-    return("display_gene")
+    return("!displayCommunity")
   }
 }
 

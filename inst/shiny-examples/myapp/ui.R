@@ -13,9 +13,9 @@ shinyUI(pageWithSidebar(
   # Sidebar with controls to select a dataset and specify the number
   # of observations to view
   sidebarPanel(
-    selectInput("geneFlag", "Choose to display gene name",
+    selectInput("communityFlag", "Customize Output: flag displays communities and edge types when true",
                 choices = c(TRUE, FALSE)),
-    selectInput("dataset", "View data input examples",
+    selectInput("dataset", "Customize Input: explore example data inputs",
                 choices = c("verticies", "edges")),
 
   ),
@@ -24,8 +24,8 @@ shinyUI(pageWithSidebar(
   # number of observations
   mainPanel(
     tabsetPanel(type = "tabs",
-                tabPanel("View Example Output", plotOutput("plot")),
-                tabPanel("View Example Inputs", tableOutput("view"))
+                tabPanel("Output", plotOutput("plot")),
+                tabPanel("Inputs", tableOutput("view"))
     )
   )
 ))
