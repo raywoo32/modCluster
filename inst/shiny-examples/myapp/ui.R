@@ -2,24 +2,31 @@
 
 library(shiny)
 
-# Define UI for application that plots random distributions
+#' Define UI for dataset viewer application
+#'
+#' @import shiny
 shinyUI(pageWithSidebar(
-
+  # Adapted from: https://shiny.rstudio.com/articles/tabsets.html
   # Application title
-  headerPanel("modCluster Example"),
+  headerPanel("Explore modCluster"),
 
-  # Sidebar with a slider input for number of observations
+  # Sidebar with controls to select a dataset and specify the number
+  # of observations to view
   sidebarPanel(
-    sliderInput("obs",
-                "Number of observations:",
-                min = 1,
-                max = 1000,
-                value = 500)
+    selectInput("geneFlag", "Choose to display gene name",
+                choices = c(TRUE, FALSE)),
+    selectInput("dataset", "View data input examples",
+                choices = c("verticies", "edges")),
+
   ),
 
-  # Show a plot of the generated distribution
+  # Show a summary of the dataset and an HTML table with the requested
+  # number of observations
   mainPanel(
-    plotOutput("distPlot")
+    tabsetPanel(type = "tabs",
+                tabPanel("View Example Output", plotOutput("plot")),
+                tabPanel("View Example Inputs", tableOutput("view"))
+    )
   )
 ))
 

@@ -1,22 +1,30 @@
 # server.R
 
+#  modCluster::runExample()
 library(shiny)
 library(datasets)
+load("../../../data/exampleEdge.Rda")
+load("../../../data/exampleVert.Rda")
 
-# Define server logic required to generate and plot a random distribution
+#' Define server logic required to summarize and view the selected dataset
+#'
+#' @import shiny
 shinyServer(function(input, output) {
+  # Adapted from: https://shiny.rstudio.com/articles/tabsets.html
+  # Return the requested dataset
+  datasetInput <- reactive({
+    switch(input$dataset,
+           "verticies" = vert,
+           "edges" = edges)
+  })
+  # Show the first "n" observations
+  output$view <- renderTable({
+    head(datasetInput(), n = 20)
+  })
+  # make plot output
+  output$plot <- renderPlot({
+    geneFlag <- input$geneFlag
 
-  # Expression that generates a plot of the distribution. The expression
-  # is wrapped in a call to renderPlot to indicate that:
-  #
-  #  1) It is "reactive" and therefore should be automatically
-  #     re-executed when inputs change
-  #  2) Its output type is a plot
-  #
-  output$distPlot <- renderPlot({
-
-    # generate an rnorm distribution and plot it
-    dist <- rnorm(input$obs)
-    hist(dist)
+    modCluster(edges, vert, geneFlag)
   })
 })
