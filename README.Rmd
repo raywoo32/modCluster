@@ -28,7 +28,7 @@ To download the package
 
 ```{r}
 #require("devtools")
-#devtools::install_github("raywoo32/modCluster", vignettes = TRUE)
+#devtools::install_github("raywoo32/modCluster", dependencies=TRUE, vignettes = TRUE)
 #library("modCluster")
 ```
 

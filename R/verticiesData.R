@@ -9,4 +9,4 @@
 #' }
 #'
 #' @source \url{https://www.wormbase.org/}
-"vert"
+"verticiesData"
