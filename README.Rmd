@@ -27,15 +27,15 @@ For graphs with biological significance it is common for there to be "modules" a
 To download the package
 
 ```{r}
-require("devtools")
-devtools::install_github("raywoo32/modCluster", vignettes = TRUE)
-library("modCluster")
+#require("devtools")
+#devtools::install_github("raywoo32/modCluster", vignettes = TRUE)
+#library("modCluster")
 ```
 
 To run the shinyApp:
 
 ```{r shiny}
-modCluster::modClusterShiny()
+#modCluster::modClusterShiny()
 ```
 
 
@@ -45,8 +45,8 @@ modCluster::modClusterShiny()
 
 To view vignette please use the following command 
 
-```r
-browseVignettes("modCluster")
+```{r}
+#browseVignettes("modCluster")
 ``` 
 
 #### Main components 
@@ -138,11 +138,11 @@ Please note references are also imbedded in code.
 A simple example of how to use modCluster
 
 ```{r example}
-library(modCluster)
-load("./data/exampleEdge.Rda")
-load("./data/exampleVert.Rda")
-clusterByModule(edges, vert, displayCommunity=FALSE)
-clusterByModule(edges, vert, displayCommunity=TRUE)
+#library(modCluster)
+#load("./data/exampleEdge.Rda")
+#load("./data/exampleVert.Rda")
+#clusterByModule(edges, vert, displayCommunity=FALSE)
+#clusterByModule(edges, vert, displayCommunity=TRUE)
 ```
 
 ![displayCommunity=TRUE](./inst/extdata/communityFlag.jpg)
