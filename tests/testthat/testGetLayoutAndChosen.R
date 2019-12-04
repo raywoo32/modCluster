@@ -2,8 +2,8 @@
 
 
 # Set up Environment
-load("../../data/exampleEdge.Rda")
-load("../../data/exampleVert.Rda")
+load("./exampleEdge.Rda")
+load("./exampleVert.Rda")
 graph <- checkValidInput(edges, vert)
 moduleGraphs <- makeModuleGraphs(edges, vert)
 grouped <- getAllPossibleGroups(graph, vert, moduleGraphs)

@@ -3,8 +3,8 @@
 library(igraph)
 
 # Set up Environment
-load("../../data/exampleEdge.Rda")
-load("../../data/exampleVert.Rda")
+load("./exampleEdge.Rda")
+load("./exampleVert.Rda")
 moduleGraphs <- makeModuleGraphs(edges, vert)
 
 test_that("Valid objects in moduleGraphs", {

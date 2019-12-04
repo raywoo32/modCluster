@@ -9,11 +9,10 @@
 #' @return NULL
 #' @export
 #'
-#'
 #'@examples
 #'\dontrun{
-#' load("./inst/exampleEdge.Rda")
-#' load("./inst/exampleVert.Rda")
+#' load("./data/exampleEdge.Rda")
+#' load("./data/exampleVert.Rda")
 #' clusterByModule(edges, vert, displayCommunity=FALSE)
 #' clusterByModule(edges, vert, displayCommunity=TRUE)
 #'}

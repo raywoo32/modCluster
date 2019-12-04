@@ -1,9 +1,10 @@
-#
-library(igraph)
+# testCheckValidInput.R
 
-# Set up Environment
-load("../../data/exampleEdge.Rda")
-load("../../data/exampleVert.Rda")
+
+load("./exampleEdge.Rda")
+load("./exampleVert.Rda")
+
+library(igraph)
 
 test_that("Throw error for bad input edges", {
   expect_error(checkValidInput(edges[, c(1,3)], vert))

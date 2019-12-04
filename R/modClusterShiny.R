@@ -1,14 +1,14 @@
-# runExample.R
+# modClusterShiny.R
 
 #' Run shiny app that shows and visualizes example
 #'
 #' @export
 #' @import shiny
-#' @example
+#' @examples
 #'\dontrun{
 #' modCluster::runExample()
 #'}
-runExample <- function() {
+modClusterShiny <- function() {
   # Adapted from: https://shiny.rstudio.com/articles/tabsets.html
   appDir <- system.file("shiny-examples", "myapp", package = "modCluster")
   if (appDir == "") {

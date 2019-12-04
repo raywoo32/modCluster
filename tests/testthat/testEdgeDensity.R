@@ -2,8 +2,8 @@
 
 library(igraph)
 # Set up Environment
-load("../../data/exampleEdge.Rda")
-load("../../data/exampleVert.Rda")
+load("./exampleEdge.Rda")
+load("./exampleVert.Rda")
 edgesNoWeight <- edges[,c(1,2)]
 graphWeight <- igraph::graph_from_data_frame(edges, directed = FALSE, vertices = vert)
 graphNoWeight <- igraph::graph_from_data_frame(edgesNoWeight, directed = FALSE, vertices = vert)

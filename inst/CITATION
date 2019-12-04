@@ -1,0 +1,21 @@
+citHeader("To cite ModCluster in publications use:")
+
+citEntry(entry = "Unpublished",
+  title        = "Cluster by module: ModCluster",
+  author       = personList(as.person("Rachel Woo")),
+  note      = "Unpublished",
+  year         = "2019",
+  url          = "https://github.com/raywoo32/modCluster",
+
+  textVersion  =
+  paste("Rachel Woo",
+        "ModCluster",
+        "2019",
+        "URL https://github.com/raywoo32/modCluster")
+)
+
+
+
+
+
+
