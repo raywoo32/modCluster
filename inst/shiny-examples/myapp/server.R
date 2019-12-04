@@ -3,8 +3,8 @@
 #  modCluster::runExample()
 library(shiny)
 library(datasets)
-load("../../../data/edges.RData")
-load("../../../data/vert.RData")
+load("../../../data/edgesData.RData")
+load("../../../data/verticiesData.RData")
 
 #' Define server logic required to summarize and view the selected dataset
 #'
