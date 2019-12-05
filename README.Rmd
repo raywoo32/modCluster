@@ -27,9 +27,9 @@ For graphs with biological significance it is common for there to be "modules" a
 To download the package
 
 ```{r}
-#require("devtools")
-#devtools::install_github("raywoo32/modCluster", dependencies=TRUE, vignettes = TRUE)
-#library("modCluster")
+require("devtools")
+devtools::install_github("raywoo32/modCluster", dependencies=TRUE)
+library("modCluster")
 ```
 
 To run the shinyApp:

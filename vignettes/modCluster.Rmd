@@ -10,9 +10,9 @@ vignette: >
 ---
 
 ```{r}
-#require("devtools")
-#devtools::install_github("raywoo32/modCluster", vignettes = TRUE)
-#library("modCluster")
+require("devtools")
+devtools::install_github("raywoo32/modCluster", dependencies=TRUE)
+library("modCluster")
 ```
 
 # Introduction 
@@ -37,11 +37,9 @@ Very simply here follows a description of how modCluster operates
 A simple example of how to use modCluster
 
 ```{r}
-#library(modCluster)
-#load("./data/exampleEdge.Rda")
-#load("./data/exampleVert.Rda")
-#clusterByModule(edges, vert, displayCommunity=FALSE)
-#clusterByModule(edges, vert, displayCommunity=TRUE)
+library(modCluster)
+clusterByModule(edgesData, verticiesData, displayCommunity=FALSE)
+clusterByModule(edgesData, verticiesData, displayCommunity=TRUE)
 ```
 
 # Data Input
