@@ -35,7 +35,7 @@ library("modCluster")
 To run the shinyApp:
 
 ```{r shiny}
-#modCluster::modClusterShiny()
+modCluster::modClusterShiny()
 ```
 
 

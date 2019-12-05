@@ -13,8 +13,8 @@ shinyServer(function(input, output) {
   # Return the requested dataset
   datasetInput <- reactive({
     switch(input$dataset,
-           "verticies" = vert,
-           "edges" = edges)
+           "verticies" = edgesData,
+           "edges" = verticiesData)
   })
   # Show the first "n" observations
   output$view <- renderTable({
@@ -24,6 +24,6 @@ shinyServer(function(input, output) {
   output$plot <- renderPlot({
     communityFlag <- input$communityFlag
 
-    clusterByModule(edges, vert, displayCommunity=communityFlag)
+    clusterByModule(edgesData, verticiesData, displayCommunity=communityFlag)
   })
 })
