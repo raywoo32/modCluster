@@ -67,8 +67,6 @@ This initial pitch image will also provide more context for the package.
 
 ## 4\. Contributions
 
-lsf.str(“package:modCluster”)
-
 While there are many different ways to cluster modules extant in
 biological literature they do not have the same function as modCluster.
 While igraph already has a function to cluster\_edge\_betweenness(), it
@@ -185,16 +183,6 @@ Please note references are also imbedded in code.
 12. <http://www.sthda.com/english/wiki/add-legends->
 
 ## 6\. Example:
-
-A simple example of how to use modCluster
-
-``` r
-#library(modCluster)
-#load("./data/exampleEdge.Rda")
-#load("./data/exampleVert.Rda")
-#clusterByModule(edges, vert, displayCommunity=FALSE)
-#clusterByModule(edges, vert, displayCommunity=TRUE)
-```
 
 ![displayCommunity=TRUE](./inst/extdata/communityFlag.jpg)
 
