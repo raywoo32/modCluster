@@ -28,7 +28,7 @@ To download the package
 
 ```{r}
 require("devtools")
-devtools::install_github("raywoo32/modCluster", dependencies=TRUE)
+devtools::install_github("raywoo32/modCluster", dependencies=TRUE, build_vignettes = TRUE)
 library("modCluster")
 ```
 
@@ -46,7 +46,7 @@ modCluster::modClusterShiny()
 To view vignette please use the following command 
 
 ```{r}
-#browseVignettes("modCluster")
+browseVignettes("modCluster")
 ``` 
 
 #### Main components 
@@ -66,8 +66,6 @@ This initial pitch image will also provide more context for the package.
 ![](./inst/extdata/ModCluster.jpg)
 
 ## 4.  Contributions
-
-lsf.str("package:modCluster")
 
 While there are many different ways to cluster modules extant in biological literature they do not have the same function as modCluster. While igraph already has a function to cluster_edge_betweenness(), it does not take into account some users may want to treat verticies as a unit. ModCluster allows the user to maintain module unity which represent important biological connections. While modCluster by no means replaces functions like cluster_edge_betweenness(), it allows the user to explore which modules have the most communication between them. 
 
@@ -138,11 +136,9 @@ Please note references are also imbedded in code.
 A simple example of how to use modCluster
 
 ```{r example}
-#library(modCluster)
-#load("./data/exampleEdge.Rda")
-#load("./data/exampleVert.Rda")
-#clusterByModule(edges, vert, displayCommunity=FALSE)
-#clusterByModule(edges, vert, displayCommunity=TRUE)
+library(modCluster)
+clusterByModule(edgesData, verticiesData, displayCommunity=FALSE)
+clusterByModule(edgesData, verticiesData, displayCommunity=TRUE)
 ```
 
 ![displayCommunity=TRUE](./inst/extdata/communityFlag.jpg)
